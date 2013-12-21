@@ -9,7 +9,7 @@ if (nimbus_get_option('image_logo') == "") {
 <?php 
 } else { 
 ?> 	
-    <a class="logotipo span3 offset4" href="<?php echo esc_url(home_url('/')); ?>">
+    <a class="logotipo span4 offset5" href="<?php echo esc_url(home_url('/')); ?>">
     	<img src="<?php echo nimbus_get_option('image_logo'); ?>" alt="<?php echo get_bloginfo('name', 'display'); ?>" />
    	</a>
 <?php 

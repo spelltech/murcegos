@@ -41,7 +41,7 @@
                     } 
                     ?>
                 </div>			
-                <div id="footer_widget_right" class="span4">
+                <div id="footer_widget_right" class="span3 offset1">
                     <?php 
                     if (is_active_sidebar( 'Footer Right' )) { 
                         dynamic_sidebar( 'Footer Right' );
@@ -86,7 +86,9 @@
                 <div class="clear"></div>
             </div>
             <p id="copyright"><?php echo nimbus_get_option('copyright') ?></p>
-            <p id="credit"><a href="http://www.nimbusthemes.com/wordpress-themes/opulus-sombre/">Opulus Sombre Theme</a> | <?php _e('Powered by', 'nimbus_opulus_sombre'); ?> <a href="http://wordpress.org"><?php _e('WordPress', 'nimbus_opulus_sombre'); ?></a></p>
+            <p id="credit">
+                <a href="http://www.spelltech.com.br" target="_blank">Spell Tech ™</a>
+            </p>
         </div>		
     </div>
 </div>

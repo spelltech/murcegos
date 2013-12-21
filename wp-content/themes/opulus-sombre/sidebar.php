@@ -20,7 +20,11 @@
             <?php 
             if ($children) { 
             ?>
-                <h2 id="side_nav_title"><a href="<?php echo $first_parent_url; ?>"><?php echo $first_parent_title; ?></a></h2>
+                <h2 id="side_nav_title">
+                    <a href="<?php echo $first_parent_url; ?>">
+                        <?php echo $first_parent_title; ?>
+                    </a>
+                </h2>
                 <ul id="side_nav_children">
                     <?php 
                     echo $children; 
@@ -34,7 +38,7 @@
     } elseif (is_single()) { 
     ?>
             <div id="side_menu">
-                <h2 id="side_nav_title"><?php _e('Categories', 'nimbus_opulus_sombre'); ?></h2>
+                <h2 id="side_nav_title"><?php _e('Categorias', 'nimbus_opulus_sombre'); ?></h2>
                 <ul id="side_nav_children">
                     <?php wp_list_categories('orderby=name&title_li='); ?>
                 </ul>
@@ -43,7 +47,7 @@
     } else if (is_home()) { 
     ?>
             <div id="side_menu">
-                <h2 id="side_nav_title">Categories</h2>
+                <h2 id="side_nav_title">Categorias</h2>
                 <ul id="side_nav_children">
                     <?php wp_list_categories('orderby=name&title_li='); ?>
                 </ul>

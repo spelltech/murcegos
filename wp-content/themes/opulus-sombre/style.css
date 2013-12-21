@@ -23,17 +23,20 @@ word-wrap:break-word;
 text-rendering:auto!important;
 }
 
-body h1, body h2, body h4, body h5{
+body h1, body h2, body h5{
 	color: #d91f26;
 	font: 900 25px/2em 'Alegreya Sans', sans-serif;
 	text-transform: uppercase;
-	-webkit-transition: 300ms all linear 0s; 
-       -moz-transition: 300ms all linear 0s; 
-         -o-transition: 300ms all linear 0s; 
-            transition: 300ms all linear 0s; 
 }
 
-a{
+body h4{
+	color: #d91f26;
+	font: 900 18px/1em 'Alegreya Sans', sans-serif;
+	margin: 0 0 15px 0;
+	text-transform: uppercase;
+}
+
+a, body h1, body h2, body h3, body h4, body h5{
 	-webkit-transition: 300ms all linear 0s; 
        -moz-transition: 300ms all linear 0s; 
          -o-transition: 300ms all linear 0s; 
@@ -246,6 +249,9 @@ text-decoration:none;
 margin:50px 0 56px;
 }
 
+.post-date{
+	display: block;
+}
 /******************************************************************************************************
 Superfish Menu
 ******************************************************************************************************/
@@ -284,7 +290,7 @@ Superfish Menu
 			text-decoration: none;
 		}
 
-		.current_page_item a{
+		.menu-horizontal-principal-container .current_page_item a{
 			background: url('../opulus-sombre/images/icons/arrow-bottom.png') no-repeat center bottom;
 			color: #d91f26!important;
 		}
@@ -592,7 +598,9 @@ padding:10px 20px 10px 10px;
 
 /* Images */
 img.wp-post-image,img.avatar {
-padding:4px;
+	float: left;
+	margin: 0 40px 0 0;
+	padding:0px;
 }
 
 .editable div.wp-caption {
@@ -732,8 +740,10 @@ width:100%;
 }
 
 #action_text p {
+	font-size:18px!important;
 	margin:0;
 	padding:0;
+	text-shadow:1px 1px #000;
 }
 
 #featured_wrap {
@@ -781,25 +791,26 @@ margin:0 20px 5px 0;
 }
 
 #frontpage_banner {
-position:relative;
+	position:relative;
+	padding: 30px;
 }
 
 #banner_content_left {
-padding:30px 0 0;
+	padding:30px 0 0;
 }
 
 #banner_content_full {
-padding:30px 0;
+	padding:30px 0;
 }
 
 #frontpage_banner img.attachment-half-image.wp-post-image {
-border:none;
-padding:0;
-margin:0;
--webkit-box-shadow:0 0 0 0;
--moz-box-shadow:0 0 0 0;
-box-shadow:0 0 0 0;
-border:none;
+	border:none;
+	padding:0;
+	margin:0;
+	-webkit-box-shadow:0 0 0 0;
+	-moz-box-shadow:0 0 0 0;
+	box-shadow:0 0 0 0;
+	border:none;
 }
 
 #frontpage_banner img.attachment-full-image.wp-post-image {
@@ -855,11 +866,12 @@ margin:25px 0;
 /******************************************************************************************************
 Nivo Custom
 ******************************************************************************************************/
-.nivo-controlNav {
-position:absolute;
-right:25px;
-bottom:15px;
-z-index:99999;
+#frontpage_banner .nivo-controlNav {
+	position:absolute;
+	right:25px;
+	bottom:15px;
+	width: auto;
+	z-index:99999;
 }
 
 .nivo-controlNav a {
@@ -1270,8 +1282,16 @@ margin:0;
 }
 
 .sidebar_editable ul li,.sidebar_editable ol li {
-margin-top:10px;
-line-height:1em;
+	margin-bottom:30px;
+	line-height:1em;
+}
+
+.sidebar_editable ul li:first-child{
+	margin-top: 10px;
+}
+
+#footer_widgets_wrap .sidebar_editable ul li{
+	margin: 5px 0 0 0;
 }
 
 /* Forms */
@@ -1607,77 +1627,87 @@ margin:0;
 padding:0;
 }
 
-#footer_meta ul#social {
+#social {
 float:right;
 }
 
-#footer_meta ul#social li {
+#social li {
 float:left;
 margin:0 0 0 4px;
 height:36px;
 width:36px;
 }
 
-#footer_meta ul#social li a {
+#social li a {
 display:block;
 height:100%;
 width:100%;
 }
 
-#footer_meta ul#social li#facebook_footer_button {
+#header_frontpage #social {
+margin: 70px 0 0 40px;
+float: left;
+}
+
+#social li#facebook_footer_button {
 background:url(images/opulis_social_sprite.png) no-repeat -205px -2px;
 }
 
-#footer_meta ul#social li#facebook_footer_button:hover {
+#social li#facebook_footer_button:hover {
 background:url(images/opulis_social_sprite.png) no-repeat -4px -2px;
 }
 
-#footer_meta ul#social li#linkedin_footer_button {
+#social li#linkedin_footer_button {
 background:url(images/opulis_social_sprite.png) no-repeat -244px -2px;
 }
 
-#footer_meta ul#social li#linkedin_footer_button:hover {
+#social li#linkedin_footer_button:hover {
 background:url(images/opulis_social_sprite.png) no-repeat -43px -2px;
 }
 
-#footer_meta ul#social li#twitter_footer_button {
+#social li#twitter_footer_button {
 background:url(images/opulis_social_sprite.png) no-repeat -284px -2px;
 }
 
-#footer_meta ul#social li#twitter_footer_button:hover {
+#social li#twitter_footer_button:hover {
 background:url(images/opulis_social_sprite.png) no-repeat -83px -2px;
 }
 
-#footer_meta ul#social li#youtube_footer_button {
+#social li#youtube_footer_button {
 background:url(images/opulis_social_sprite.png) no-repeat -324px -2px;
 }
 
-#footer_meta ul#social li#youtube_footer_button:hover {
+#social li#youtube_footer_button:hover {
 background:url(images/opulis_social_sprite.png) no-repeat -123px -2px;
 }
 
-#footer_meta ul#social li#google_plus_footer_button {
+#social li#google_plus_footer_button {
 background:url(images/opulis_social_sprite.png) no-repeat -442px -2px;
 }
 
-#footer_meta ul#social li#google_plus_footer_button:hover {
+#social li#google_plus_footer_button:hover {
 background:url(images/opulis_social_sprite.png) no-repeat -403px -2px;
 }
 
-#footer_meta ul#social li#rss_footer_button {
+#social li#rss_footer_button {
 background:url(images/opulis_social_sprite.png) no-repeat -364px -2px;
 }
 
-#footer_meta ul#social li#rss_footer_button:hover {
+#social li#rss_footer_button:hover {
 background:url(images/opulis_social_sprite.png) no-repeat -163px -2px;
 }
 
 #credit {
-float:right;
+	float:right;
 }
 
+ #credit a:hover{
+ 	color: #06c3e5;
+ 	text-decoration: none;
+ }
+
 #copyright {
-float:left;
+	float:left;
 }
 
 /******************************************************************************************************
@@ -1697,45 +1727,51 @@ float:none!important;
 }
 
 .clear5 {
-width:100%;
-height:5px;
-clear:both;
+	width:100%;
+	height:5px;
+	clear:both;
 }
 
 .clear10 {
-width:100%;
-height:10px;
-clear:both;
+	width:100%;
+	height:10px;
+	clear:both;
 }
 
 .clear15 {
-width:100%;
-height:15px;
-clear:both;
+	width:100%;
+	height:15px;
+	clear:both;
 }
 
 .clear20 {
-width:100%;
-height:20px;
-clear:both;
+	width:100%;
+	height:20px;
+	clear:both;
 }
 
 .clear25 {
-width:100%;
-height:25px;
-clear:both;
+	width:100%;
+	height:25px;
+	clear:both;
 }
 
 .clear30 {
-width:100%;
-height:30px;
-clear:both;
+	width:100%;
+	height:30px;
+	clear:both;
 }
 
 .clear35 {
-width:100%;
-height:35px;
-clear:both;
+	width:100%;
+	height:35px;
+	clear:both;
+}
+
+.clear50 {
+	width:100%;
+	height:50px;
+	clear:both;
 }
 
 .hidden {
@@ -2073,33 +2109,29 @@ display:none;
 }
 
 ##banner_content_left .jspContainer .jspPane > p,#banner_content_left > p,#banner_content_full > p {
-padding-left:20px;
-padding-right:20px;
+	padding-left:20px;
+	padding-right:20px;
 }
 
 #banner_content_left .nimbus_typography_one,#banner_content_left .nimbus_typography_two,#banner_content_left .nimbus_typography_three,#banner_content_full .nimbus_typography_one,#banner_content_full .nimbus_typography_two,#banner_content_full .nimbus_typography_three {
-padding-right:20px;
-display:table-cell;
+	padding-right:20px;
+	display:table-cell;
 }
 
 #frontpage_banner img.attachment-full-banner {
-margin:0;
-padding:0;
-border:none;
+	margin:0;
+	padding:0;
+	border:none;
 }
 
 #action_text_wrap {
-background:transparent!important;
-padding:0!important;
-border-bottom:none!important;
+	background:transparent!important;
+	padding:0!important;
+	border-bottom:none!important;
 }
 
 #action_text {
-padding:20px 0!important;
-}
-
-#action_text p {
-font-size:18px!important;
+	padding:20px 0!important;
 }
 
 #featured_wrap {
@@ -2113,19 +2145,24 @@ border-bottom:1px dotted #D6D6D6;
 }
 
 #frontpage_blog_row {
-padding:10px 0;
+	padding:10px 0;
 }
 
+	#frontpage_blog{
+		border-right: 1px dashed #d91f26;
+		padding-right: 10px;
+	}
+
 .footer_widget {
-padding:0 0 20px;
+	padding:0 0 20px;
 }
 
 #footer_widgets_wrap {
-padding:20px 0;
+	padding:20px 0;
 }
 
 #blog_row_widget {
-margin:15px 0 0;
+	margin:15px 0 0;
 }
 
 #footer_meta ul#contact {

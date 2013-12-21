@@ -193,7 +193,7 @@ get_header();
                                         <?php 
                                         the_excerpt(); 
                                         ?>
-                                        <div class="clear10"></div>
+                                        <div class="clear50"></div>
                                         <div class="clear10 visible-phone"></div>
                                     <?php 
                                     endwhile;
